@@ -1,50 +1,26 @@
-# React + TypeScript + Vite
+## Description
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This project is a **Contact Us** form component built using modern frontend technologies including **React**, **TypeScript**, and **Tailwind CSS**. It utilizes **React Hook Form** for efficient form handling, with schema validation powered by **Zod** and the integration of **@hookform/resolvers** to handle form validation logic. For making API requests, **Axios** is employed.
 
-Currently, two official plugins are available:
+The form includes fields for first name, last name, email, message, and a query type (General Enquiry or Support Request). Additionally, it includes a consent checkbox before submission.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+### Key Features:
 
-## Expanding the ESLint configuration
+- **Responsive UI**: The form is styled using Tailwind CSS, ensuring a clean and responsive design.
+- **Form Validation**: Form input is validated using **Zod** schemas integrated with **React Hook Form** for better handling of user input and error management.
+- **API Integration**: Axios is used for sending form data to a backend API for processing.
+- **Custom Hook**: Utilizing the `@hookform/resolvers` package to integrate Zod with React Hook Form, making schema validation seamless.
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+---
 
-- Configure the top-level `parserOptions` property like this:
+## Technologies Used
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+- **React**: JavaScript library for building user interfaces
+- **TypeScript**: Type-safe development experience
+- **Tailwind CSS**: Utility-first CSS framework for styling
+- **React Hook Form**: Form management library for React
+- **@hookform/resolvers**: Resolver library for integrating external validation with React Hook Form
+- **Zod**: TypeScript-first schema declaration and validation library
+- **Axios**: Promise-based HTTP client for making requests to the backend
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
-
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
-
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+---
