@@ -1,0 +1,35 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: "Karla";
+  src: local("Karla"),
+    url("./assets/fonts/Karla-VariableFont_wght.ttf") format("truetype");
+  font-weight: normal;
+}
+
+@layer base {
+  body {
+    @apply bg-primary-200 font-karla;
+  }
+}
+@layer components {
+  .form__input {
+    @apply mt-2 w-full border rounded-md p-3 focus:outline-primary-600;
+  }
+  .form__radio {
+    @apply w-full md:w-1/2 space-x-2 border rounded-md p-3 flex items-center;
+  }
+  .form__textarea {
+    @apply mt-2 h-44 w-full border border-neutral-900 outline-neutral-900 rounded-md p-3 focus:outline-primary-600 resize-none;
+  }
+  .toast {
+    @apply min-w-80 fixed transition-all duration-300 ease-in-out shadow-2xl rounded-md bg-neutral-900 text-white top-5 left-1/2 transform -translate-x-1/2 p-4;
+  }
+}
+@layer utilities {
+  .flex-center {
+    @apply justify-center items-center;
+  }
+}
